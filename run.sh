@@ -14,5 +14,6 @@ export XDG_DATA_DIRS="/usr/local/share:/usr/share"
 export DISPLAY="${DISPLAY:-:0}"
 export XAUTHORITY="${XAUTHORITY:-$HOME/.Xauthority}"
 
-# Run the application
+# Build and run the application
+go build -o netpulse ./cmd/netpulse
 ./netpulse

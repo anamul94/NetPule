@@ -8,13 +8,20 @@ A lightweight Linux system tray application that monitors network interface spee
 - Support for all network interfaces
 - Interface selection (All interfaces or specific interface)
 - Automatic unit scaling (B/s, KB/s, MB/s)
-- Clean, minimal interface
+- Clean, modular architecture
+- Minimal interface
 
-## Usage
+## Quick Start
 
 ```bash
-go build -o netpulse main.go
 ./run.sh
+```
+
+## Manual Build
+
+```bash
+go build -o netpulse ./cmd/netpulse
+./netpulse
 ```
 
 ## Requirements
@@ -22,6 +29,13 @@ go build -o netpulse main.go
 - Linux with GTK3
 - Go 1.24+
 - System tray support
+
+## Architecture
+
+- `cmd/netpulse/` - Application entry point
+- `internal/domain/` - Business logic interfaces
+- `internal/infrastructure/` - Network data access
+- `internal/ui/` - System tray interface
 
 ## Interface Selection
 
